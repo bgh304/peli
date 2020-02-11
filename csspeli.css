@@ -1,0 +1,65 @@
+div.pelaajaKaikki {
+    background-color: cadetblue;
+    float: left;
+    margin-left: 28%;
+    margin-top: 5%;
+    width: 130;
+    height: 100px;
+}
+
+div.tietokoneKaikki {
+    background-color: cadetblue;
+    float: right;
+    margin-right: 28%;
+    margin-top: 5%;
+    width: 150;
+    height: 100px;
+}
+
+div.pelaaja {
+    font-family: "Lucida Console", monospace;
+    padding: 10px 5px;
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+
+div.tietokone {
+    font-family: "Lucida Console", monospace;
+    padding: 10px 10px;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+div.pelaajaStatit {
+    font-family: "Lucida Console", monospace;
+    padding: 10px 15px;
+    float: left;
+    width: 120px;
+    height: 100px;
+}
+
+div.tietokoneStatit {
+    font-family: "Lucida Console", monospace;
+    padding: 10px 10px;
+    float: right;
+    width: 120px;
+    height: 100px;
+}
+
+div.tekstit {
+    font-family: "Lucida Console", monospace;
+    float: left;
+    margin-left: 31%;
+    margin-top: 2%;
+}
+
+.button {
+    background-color:#f9df32;
+    border: none;
+    color: black;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 20px;
+}

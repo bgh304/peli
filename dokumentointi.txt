@@ -1,0 +1,143 @@
+PELI.HTML
+
+1. napit: (hyokkaaN(), puolustaN(), keraaVN(), itemN())
+
+Asettaa pelaajan toiminnon arvoksi 1: hyˆkk‰‰, 2: puolusta, 3: ker‰‰ voimia, 4: k‰yt‰ item.
+
+
+
+MOOTTORIPELI.JS
+
+
+FUNKTIOT:
+
+2. sivulle(String)
+
+Tulostaa sivulle "tekstit"-osaan parametriksi saadun merkkijonon.
+
+
+2.1 vuoro()
+
+Suorittaa pelaajan ja tietokoneen toiminnot.
+
+
+2.2 tilanne()
+
+Tarkastaa seuraavat asiat:
+
+- vuoron j‰lkeen tilanteen
+- itemien vaikutuksen voimassaolon
+- tietokoneen voimien palautumisen
+- pelin p‰‰ttymisen
+
+P‰‰tt‰‰ myˆs tietokoneen toiminnot.
+
+
+2.3 osuma(hahmo)
+
+Hyˆkk‰ysmetodi pelaajalle ja tietokoneelle. Parametriksi annettaan hahmo keneen hyˆkk‰ys kohdistuu.
+
+
+2.4 buusti(hahmo)
+
+Arpoo satunnaisesti itemin pelaajalle. Vaikka buusti on vain pelaajalle, on metodilla kuitenkin parametrina hahmo kenelle buusti annetaan.
+
+
+2.5 itemK(item, hahmo)
+
+K‰ytt‰‰ halutun itemin. 'item'-parametrille annetaan itemi joka k‰ytet‰‰n, 'hahmo'-parametrille annetaan hahmo kuka k‰ytt‰‰ parametrin. K‰yt‰nnˆss‰ vain pelaaja voi k‰ytt‰‰ itemin.
+
+
+2.6 lisaaI(itemi, hahmo)
+
+Lis‰‰ hahmolle itemin. 'itemi'-parametrille annetaan haluttu item ja 'hahmo'-parametrille annetaan hahmo kenelle item annetaan. K‰yt‰nnˆss‰ vain pelaaja voi saada itemin.
+
+
+2.7 satunnainenL()
+
+Arpoo satunnaisen luvun. K‰ytet‰‰n 'osuma(hahmo)'-metodissa (5.).
+
+
+OLIOT
+
+3. let pelaaja
+
+Pelaaja-olio.
+
+
+3.1. hyokkaa()
+
+Hyˆkk‰ys-metodi. K‰ytt‰‰ 'osuma(hahmo)'-metodia (5.).
+
+
+3.2. puolusta()
+
+Puolustus-metodi.
+
+
+3.3. keraaV(onOff)
+
+Ker‰‰ voimia-metodi. Parametriksi annetaan 'on' tai 'off'. Jos parametriksi annetaan 'on', saa pelaaja attackiin lis‰pisteit‰ muutamaksi vuoroksi ja hp:t‰ lis‰‰ kertaluontoisesti. Jos parametriksi annetaan 'off', pelaajan attack palautuu normaaliksi.
+
+
+3.4. kItemi(item)
+
+K‰ytt‰‰ itemin. Parametriksi annetaan haluttu item.
+
+
+3.5. iKesto(item)
+
+Palauttaa itemist‰ saadut lis‰t takaisin. Parametriksi annetaan item jonka lis‰t halutaan palauttaa takaisin.
+
+
+3.6. nimi()
+
+Palauttaa pelaajan nimen.
+
+
+3.7. statit()
+
+Palauttaa sivulle pelaajan statit.
+
+
+
+4. let tietokone
+
+Tietokone-olio.
+
+
+4.1. hyokkaa()
+
+Hyˆkk‰ys-metodi. K‰ytt‰‰ 'osuma(hahmo)'-metodia (5.).
+
+
+4.2. puolusta()
+
+Puolustus-metodi.
+
+
+4.3. keraaV()
+
+Ker‰‰ voimia-metodi.
+
+
+4.4. nimi()
+
+Palauttaa tietokoneen nimen.
+
+
+4.5. statit()
+
+Palauttaa sivulle tietokoneen statit.
+
+
+MUUTTUJAT
+
+5. vuoroL - int
+
+Vuoron numero. Kasvaa yhdell‰ joka vuoro.
+
+
+5.1. vuoroOO - boolean
+
+Vuoro on/off. Taistelutoiminnot toimivat kun vuoroOO on true.

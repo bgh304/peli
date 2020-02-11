@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="csspeli.css" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <style>
+                table tr, th {
+                        border: 20px solid white;
+                }
+        </style>
+
+        <br><br><br><br>
+        
+
+        <div id="napit" align="center">
+                <button type="button" class="button" onclick="hyokkaaN()">Hyökkää</button>
+                <button type="button" class="button" onclick="puolustaN()">Puolusta</button>
+                <button type="button" class="button" onclick="keraaVN()">Kerää voimia</button>
+                <button type="button" class="button" onclick="itemN()">Item</button>
+        </div>
+        
+        <div>
+        <div class="pelaajaKaikki">
+            <div class="pelaajaStatit" id="pelaajaStatit">
+                Attack: 7<br>
+                Defence: 5<br>
+                Agility: 8
+            </div>
+            <div class="pelaaja" id="pelaaja"></div>
+        </div>
+        
+        <div class="tietokoneKaikki">
+            <div class="tietokoneStatit" id="tietokoneStatit">
+                Attack: 7<br>
+                Defence: 5<br>
+                Agility: 10
+            </div>
+            <div class="tietokone" id="tietokone"></div>
+        </div>
+        </div>
+        
+        <div id="tekstit" class="tekstit" align="left"></div>
+        
+        <script type="text/javascript" src="moottoripeli.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    sivulle("Tervetuloa peliin.");
+
+    document.getElementById("pelaaja").innerHTML = "PELAAJA <br>" + "Hp: " + pelaaja.hp + "<br>";
+    document.getElementById("pelaaja").innerHTML += "ITEM: " + pelaaja.item;
+
+    document.getElementById("tietokone").innerHTML = "TIETOKONE <br>" + "Hp: " + tietokone.hp;
+
+    function hyokkaaN() {
+            pelaaja.toiminto = 0;
+            vuoroOO = true;
+            tyhjenna();
+            vuoro();
+    }
+
+    function puolustaN() {
+            pelaaja.toiminto = 1;
+            vuoroOO = true;
+            tyhjenna();
+            vuoro();
+    }
+
+    function keraaVN() {
+            pelaaja.toiminto = 3;
+            vuoroOO = true;
+            tyhjenna();
+            vuoro();
+    }
+
+    function itemN() {
+        if (pelaaja.item != "-") {
+            pelaaja.toiminto = 4;
+            vuoroOO = true;
+            tyhjenna();
+            vuoro();
+        }
+    }
+
+</script>
+</body>
+
+
+</html>
